@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background-color: darkgreen; */
+  /* temp */
+  display: grid;
+  grid-template:
+    "sidebar main" 750px /
+    500px 1fr;
+  font-family: sans-serif;
+}
+
+header {
+  grid-area: sidebar;
+  position: relative;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: 35% 30% 35%;
+}
+
+.titlelogo {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 150px;
+  align-items: center;
+  bottom: 200px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+  font-family: "Rubik 80s Fade", cursive;
+  color: white;
+  font-size: 60px;
+}
+
+header .credit {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
+
+header .credit a:link,
+header .credit a:visited {
+  color: white;
+}
+
+.textpromt,
+.register {
+  background-color: #edebeb;
+}
+
+.textpromt {
+  align-content: flex-end;
+  display: grid;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px 200px 60px 40px;
+}
+
+.textpromt p:first-child {
+  padding-bottom: 20px;
+}
+
+.from {
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 200px 30px 40px;
+  /* box-shadow: 0px 3px 5px 1px #000000; */
+  box-shadow: inset 0px -1px 50px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1px;
+}
+.from h2 {
+  margin-bottom: 18px;
+}
+form {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  grid-row-gap: 10px;
+  width: 1000px;
+}
+label {
+  display: block;
+}
+
+form div {
+  padding-right: 20px;
+}
+
+form div input {
+  border: 1px rgba(0, 0, 0, 0.2) solid;
+  width: 200px;
+  height: 25px;
+  border-radius: 2px;
+  padding-left: 5px;
+  outline: none;
+}
+
+form div input:focus {
+  border: 1px rgba(58, 132, 255, 0.8) solid;
+  outline: none;
+}
+
+.register {
+  padding: 40px 40px;
+}
+.register button {
+  padding: 12px 50px;
+  border-radius: 10px;
+  border: 1px #596d48 solid;
+  background-color: #596d48;
+  color: white;
+  font-size: 20px;
+}
+.register p {
+  margin-top: 30px;
+  /* margin-left: 4px; */
+  font-weight: 600;
+}
+.register p span {
+  color: #596d48;
+}
+
+.error {
+  border: 1px rgba(254, 121, 104, 0.8) solid;
+}
