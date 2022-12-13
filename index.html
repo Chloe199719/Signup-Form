@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik+80s+Fade&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
@@ -55,7 +55,7 @@
       </div>
       <div class="from">
         <h2>Lets do this!</h2>
-        <form action="#" method="get">
+        <form action="#" method="POST">
           <div>
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="firstName" />
@@ -80,6 +80,7 @@
               name="password"
               id="password"
             />
+            <p>*Password do not match</p>
           </div>
           <div>
             <label for="passwordConfirm">Confirm Password</label
@@ -92,9 +93,16 @@
         </form>
       </div>
       <div class="register">
-        <button type="submit">Create Account</button>
+        <button
+          class="submit"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+          type="submit"
+        >
+          Create Account
+        </button>
         <p>Already have an account? <span>Log In</span></p>
       </div>
     </main>
+    <!-- <script src="script.js"></script> -->
   </body>
 </html>

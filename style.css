@@ -12,7 +12,7 @@ body {
   display: grid;
   grid-template:
     "sidebar main" 750px /
-    500px 1fr;
+    500px calc(100vw - 500px);
   font-family: sans-serif;
 }
 
@@ -24,7 +24,7 @@ header {
 main {
   grid-area: main;
   display: grid;
-  grid-template-rows: 35% 30% 35%;
+  grid-template-rows: 35% 35% 30%;
 }
 
 .titlelogo {
@@ -73,6 +73,7 @@ header .credit a:visited {
 
 .textpromt p:first-child {
   padding-bottom: 20px;
+  overflow-wrap: break-word;
 }
 
 .from {
@@ -81,20 +82,24 @@ header .credit a:visited {
   flex-wrap: wrap;
   padding: 20px 200px 30px 40px;
   /* box-shadow: 0px 3px 5px 1px #000000; */
-  box-shadow: inset 0px -1px 50px 5px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1px;
+  box-shadow: inset 0px -1px 5px 5px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 1px; */
+  font-family: "Roboto Mono", monospace;
 }
 .from h2 {
   margin-bottom: 18px;
+  width: 100%;
 }
 form {
   display: grid;
   grid-template-columns: 300px 300px;
   grid-row-gap: 10px;
-  width: 1000px;
+  /* width: 1000px; */
 }
 label {
   display: block;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 form div {
@@ -115,6 +120,11 @@ form div input:focus {
   outline: none;
 }
 
+form div p {
+  margin-top: 2px;
+  font-size: 12px;
+  color: rgba(254, 121, 104, 1);
+}
 .register {
   padding: 40px 40px;
 }
@@ -125,6 +135,15 @@ form div input:focus {
   background-color: #596d48;
   color: white;
   font-size: 20px;
+  transition: all 200ms ease-in-out;
+}
+.register button:hover {
+  box-shadow: rgb(0, 0, 0) 0px 10px 13px -7px, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  transform: translate(0px, 1px);
+}
+.register button:active {
+  transform: translate(-0px, -2px);
+  box-shadow: none;
 }
 .register p {
   margin-top: 30px;
@@ -137,4 +156,7 @@ form div input:focus {
 
 .error {
   border: 1px rgba(254, 121, 104, 0.8) solid;
+}
+.hidden {
+  display: none;
 }
