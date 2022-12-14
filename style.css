@@ -38,6 +38,10 @@ main {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
+.titlelogo img {
+  margin-right: 20px;
+}
+
 h1 {
   font-family: "Rubik 80s Fade", cursive;
   color: white;
@@ -119,6 +123,10 @@ form div input:focus {
   border: 1px rgba(58, 132, 255, 0.8) solid;
   outline: none;
 }
+
+/* form div input:invalid {
+  border: 1px rgba(254, 121, 104, 0.8) solid;
+} */
 
 form div p {
   margin-top: 2px;
